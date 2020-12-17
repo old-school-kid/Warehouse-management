@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="col-lg-12 login-form">
+    <div class="col-lg-12 login-form">
+        <form action="/msgtosfwh" method="POST">
+            <div class="form-group">
+                <label class="form-control-label">Message to Supplier</label>
+                <input type="text" class="form-control" placeholder="5kg Potato" name="mtsfw">
+            </div>
+
+            <div class="col-lg-12 loginbttm">
+                <div class="col-lg-6 login-btm login-text">
+                    <!-- Error Message -->
+                </div>
+                <div class="col-lg-6 login-btm login-button">
+                    <button type="submit" class="btn btn-outline-primary">SEND</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="jumbotron">
+    <h2 style="text-align: center;">Talked to supplier</h2>
+    {% for x in info1 %}
+        <div class="container">
+            <h4>
+                {{ info1[x]["msg"] }}
+            </h4>
+        </div>
+    {% endfor %}
+</div>
+
+
+<div class="col-lg-12 login-form">
+    <div class="col-lg-12 login-form">
+        <form action="/msgtorfwh" method="POST">
+            <div class="form-group">
+                <label class="form-control-label">Message to Resturant</label>
+                <input type="text" class="form-control" placeholder="5kg Potato" name="mtrfw">
+            </div>
+
+            <div class="col-lg-12 loginbttm">
+                <div class="col-lg-6 login-btm login-text">
+                    <!-- Error Message -->
+                </div>
+                <div class="col-lg-6 login-btm login-button">
+                    <button type="submit" class="btn btn-outline-primary">SEND</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="jumbotron">
+    <h2 style="text-align: center;">Talked to Resturant</h2>
+    {% for x in info2 %}
+        <div class="container">
+            <h4>
+                {{ info2[x]["msg"] }}
+            </h4>
+        </div>
+    {% endfor %}
+</div>
+
+
+<div class="jumbotron">
+    <h2 style="text-align: center;">Message from Resturant</h2>
+    {% for x in info3 %}
+        <div class="container">
+            <h4>
+                {{ info3[x]["msg"] }}
+            </h4>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+<div class="jumbotron">
+    <h2 style="text-align: center;">Message from Supplier</h2>
+    {% for x in info4 %}
+        <div class="container">
+            <h4>
+                {{ info4[x]["msg"] }}
+            </h4>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+    
+{% endblock content %}
