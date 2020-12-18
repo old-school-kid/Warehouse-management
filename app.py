@@ -126,13 +126,19 @@ def wpp():
 def predict():
 
 
+
     direct_input=[x for x in request.form.values()]
 
-    model1 = joblib.load(open(direct_input[0]+'_'+direct_input[1]+'.sav', 'rb'))
-    model2 = joblib.load(open(direct_input[0]+'_'+direct_input[1]+'2.sav', 'rb'))
+    model1 = joblib.load(open("saved models/"+direct_input[0]+'_'+direct_input[1]+'.sav', 'rb'))
+    model2 = joblib.load(open("saved models/"+direct_input[0]+'_'+direct_input[1]+'2.sav', 'rb'))
+
 
 
     flt_features = [float(x) for x in request.form.values()]
+
+    flt_features[3]/=100
+    flt_features[2]/=100
+
     flt_features.append(flt_features[3]-flt_features[2])
     final_features1 = [np.array(flt_features[2:])]
     print(flt_features)
@@ -148,6 +154,7 @@ def predict():
     output2 = round(prediction2[0])
     print(output2)
     return redirect(url_for('wpp'))
+
 
 #blockchain routes+ API
 
@@ -208,4 +215,4 @@ def timestamp_to_string(epoch_time):
     return datetime.datetime.fromtimestamp(epoch_time).strftime('%H:%M')
 
 if __name__=="__main__":
-    app.run(port=5000, debug=True)
+    app.run(port=5000)
