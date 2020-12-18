@@ -153,7 +153,7 @@ def predict():
     prediction2 = model2.predict(final_features2)
     output2 = round(prediction2[0])
     print(output2)
-    return redirect(url_for('wpp'))
+    return render_template('pp.html',prediction_text=output2)
 
 
 #blockchain routes+ API
