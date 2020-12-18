@@ -1,5 +1,8 @@
 from  flask import Flask ,render_template,url_for,redirect,request,flash
+import numpy as np
 import pyrebase
+import joblib
+import sys
 
 config ={
     "apiKey": "AIzaSyAy_-B05G2AYFrOi0FUQAMHrbew7zThnc8",
@@ -98,6 +101,46 @@ def msgtowhfr():
     data=request.form
     db.child("message to wh from r").push({"msg":data["mtwfr"]})
     return redirect(url_for('Restaurant'))
+
+
+
+
+##Warehouse model form and display page
+
+@app.route("/pp")
+def wpp():
+    return render_template('pp.html')
+
+
+@app.route("/predict",methods=['POST'])
+def predict():
+
+
+    direct_input=[x for x in request.form.values()]
+
+    model1 = joblib.load(open(direct_input[0]+'_'+direct_input[1]+'.sav', 'rb'))
+    model2 = joblib.load(open(direct_input[0]+'_'+direct_input[1]+'2.sav', 'rb'))
+
+
+    flt_features = [float(x) for x in request.form.values()]
+    flt_features.append(flt_features[3]-flt_features[2])
+    final_features1 = [np.array(flt_features[2:])]
+    print(flt_features)
+    print(final_features1)
+
+    prediction1 = model1.predict(final_features1)
+    output1 = round(prediction1[0])
+    print(output1)
+
+    flt_features.append(output1)
+    final_features2 = [np.array(flt_features[2:])]
+    prediction2 = model2.predict(final_features2)
+    output2 = round(prediction2[0])
+    print(output2)
+    return redirect(url_for('wpp'))
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
