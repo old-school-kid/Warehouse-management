@@ -8,6 +8,7 @@ A software prototype web app for demand forecasting, inventory management and fo
 
 ## ML solutions
 With an ensemble of Random Forest Regressor and LSTM on it we acheieved sufficient accuracy.
+![Final Prediction](https://github.com/old-school-kid/Warehouse-management/blob/main/Images/Final%20prediction.png)
 
 ## Blockchain
 Blockchain was used for food-supply management, and finding where food comes from
@@ -30,4 +31,8 @@ On terminal 2
 export FLASK_APP=block_chain.py
 flask run --port 8000
 ```
+
+## Important Links 
+  - [Data Set](https://www.kaggle.com/ghoshsaptarshi/av-genpact-hack-dec2018?rvi=1)
+  - [Project PPt](https://docs.google.com/presentation/d/1N9zVw6edm_Xv01KAB8HROFSa1l06qUj4nqYzk7uSLnU/edit?usp=sharing)
 
