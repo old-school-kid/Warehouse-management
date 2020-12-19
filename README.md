@@ -10,8 +10,23 @@ A software prototype web app for demand forecasting, inventory management and fo
 With an ensemble of Random Forest Regressor and LSTM on it we acheieved sufficient accuracy.
 
 ## Blockchain
+Blockchain was used for food-supply management, and finding where food comes from
 
 ## To run on your machine 
+Run the following commands in the command line:
+```
+pip3 install wheel flask pyrebase numpy joblib 
+```
 
-## Important links
+On two terminal sessions type the following commands:
+
+On terminal 1
+```python app.py
+```
+
+On terminal 2
+```
+export FLASK_APP=block_chain.py
+flask run --port 8000
+```
 
