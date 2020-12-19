@@ -21,7 +21,8 @@ pip3 install wheel flask pyrebase numpy joblib
 On two terminal sessions type the following commands:
 
 On terminal 1
-```python app.py
+```
+python app.py
 ```
 
 On terminal 2
