@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- [Problem Statement](#Problem-Satement)
+- [Problem Statement](#Problem Statement)
 - [Solution](#solution)
 - [ML Solution](#ML-solution)
 - [Blockchain Solutions](#Blockchain)
