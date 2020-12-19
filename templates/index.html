@@ -1,24 +1,41 @@
-{% extends "base.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
+	<div class = "col-mb-3 col-md-12" ><h1 style="text-align: center;">{{ title }}</h1></div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+	<div class="container" style="align-items: center;">
+		<center>
+			<form action="/submit" id="textform" method="post">
+				<textarea name="content" rows="4" cols="50" placeholder="Write quantity and supplied food" style="margin:2%"></textarea>
+				<br>
+				<input type="text" name="author" placeholder="Your name" style="margin:2%">
+				<input type="submit" value="Add">
+			</form>
+			<br>
+			<a href="{{node_address}}/mine" target="_blank">
+				<!-- <button>Add to blockchain</button> -->
+				<button type="button" class="btn btn-secondary">Add to blockchain</button>
+			</a>
+			<a href="/find_my_food">
+				<!-- <button>Find my food source!</button> -->
+			<button type="button" class="btn btn-secondary">Find my food source!</button></a>
+			<div style="margin: 20px;">
+			</center>
+	</div>
+	
+<hr>
 	<br>
-
-	<center>
-	<form action="/submit" id="textform" method="post">
-	    <textarea name="content" rows="4" cols="50" placeholder="Write quantity and supplied food"></textarea>
-	    <br>
-	    <input type="text" name="author" placeholder="Your name">
-	    <input type="submit" value="Add">
-	</form>
-	</center>
-
-	<br>
-
-	<a href="{{node_address}}/mine" target="_blank"><button>Add to blockchain</button></a>
-	<a href="/find_my_food"><button>Find my food source!</button></a>
-
-	<div style="margin: 20px;">
-
+	<div class=container>
+	<div class="col-mb-3 col-md-12">
     {% for post in posts %}
     <div class="post_box">
 	   <div class="post_box-header">
@@ -33,14 +50,15 @@
 	   </div>
 	</div>
 	{% endfor %}
-
+    </div>
+</div>
 	<style>
 		.post_box {
 		    background: #fff;
 		    padding: 12px 0px 0px 12px;
 		    margin-top: 0px;
 		    margin-bottom: 8px;
-		    border-top: 1px solid #f0f0f0;
+		    border: 1px solid rgb(214, 214, 214);
 		}
 
 		.post_box-header {
