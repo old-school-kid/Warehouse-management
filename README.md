@@ -38,6 +38,8 @@ On terminal 1
 ```
 python app.py
 ```
+Allowed entries for USERNAME are SUPPLIER, RESTAURANT, WAREHOUSE
+Password for all of them are 12345
 Before filling in the data please refer to the dataset. Link provided below.
 
 On terminal 2
