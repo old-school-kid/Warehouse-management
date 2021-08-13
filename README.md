@@ -24,7 +24,7 @@ Blockchain was used for food-supply management, and finding where food comes fro
 
 ## To run on your machine 
 
-download the saved models (only few have been provided for testing purpose directly in the repo).
+download the saved models (only few have been provided for testing purpose directly in the repo) from [here](https://drive.google.com/file/d/12tnt5IYw8O-ScwH-dc1JBkSMy3de07Lj/view?usp=sharing).
 Run the following commands in the command line:
 ```
 git clone https://github.com/old-school-kid/Warehouse-management.git
