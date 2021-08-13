@@ -48,5 +48,5 @@ flask run --port 8000
 
 ## Important Links 
   - [Data Set](https://www.kaggle.com/ghoshsaptarshi/av-genpact-hack-dec2018?rvi=1)
-  - [Project PPt](https://docs.google.com/presentation/d/1N9zVw6edm_Xv01KAB8HROFSa1l06qUj4nqYzk7uSLnU/edit?usp=sharing)
+  - [Project PPt](https://docs.google.com/presentation/d/1N5q2Oo6VV6-OfUxNbGrZtgSxpJClLpjqZNC8lbzkUbs/edit?usp=sharing)
 
