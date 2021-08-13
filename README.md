@@ -23,6 +23,8 @@ With an ensemble of Random Forest Regressor and LSTM on it we acheieved sufficie
 Blockchain was used for food-supply management, and finding where food comes from
 
 ## To run on your machine 
+
+download the saved models (only few have been provided for testing purpose directly in the repo)
 Run the following commands in the command line:
 ```
 git clone https://github.com/old-school-kid/Warehouse-management.git
