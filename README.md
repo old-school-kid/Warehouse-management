@@ -25,15 +25,18 @@ Blockchain was used for food-supply management, and finding where food comes fro
 ## To run on your machine 
 Run the following commands in the command line:
 ```
-pip3 install wheel flask pyrebase numpy joblib 
+git clone https://github.com/old-school-kid/Warehouse-management.git
+cd Warehouse-management
+pip install -r requirements 
 ```
 
-On two terminal sessions type the following commands:
+Start two terminal sessions type the following commands:
 
 On terminal 1
 ```
 python app.py
 ```
+Before filling in the data please refer to the dataset. Link provided below.
 
 On terminal 2
 ```
