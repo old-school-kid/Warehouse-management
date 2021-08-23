@@ -29,7 +29,7 @@ Run the following commands in the command line:
 ```
 git clone https://github.com/old-school-kid/Warehouse-management.git
 cd Warehouse-management
-pip install -r requirements 
+pip install -r requirements.txt
 ```
 
 Start two terminal sessions type the following commands:
